@@ -24,7 +24,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Flipper-Boost-iOSX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Flipper-DoubleConversion.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Flipper-Fmt.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -64,12 +74,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-AwesomeProject-AwesomeProjectTests.xcscheme</key>
+		<key>Pods-demoapp-demoappTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-AwesomeProject.xcscheme</key>
+		<key>Pods-demoapp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -205,6 +215,11 @@
 			<false/>
 		</dict>
 		<key>boost-for-react-native.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>fmt.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
