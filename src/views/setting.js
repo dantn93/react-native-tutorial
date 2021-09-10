@@ -11,9 +11,9 @@ export default Setting = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       {/* Header */}
-      <View style={{ height: '8%', width: '100%', borderWidth: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+      <View style={{ height: '8%', width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
         <TouchableOpacity
-          style={{ height: '100%', aspectRatio: 1.7, borderWidth: 1, alignItems: 'center', flexDirection: 'row', alignItems: 'center', paddingLeft: 10 }}
+          style={{ height: '100%', aspectRatio: 1.7, alignItems: 'center', flexDirection: 'row', alignItems: 'center', paddingLeft: 10 }}
           onPress={() => {
             navigation.goBack()
           }}

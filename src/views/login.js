@@ -62,7 +62,7 @@ export default Login = ({ navigation }) => {
             <TouchableOpacity
               style={{ width: '60%', height: '30%', borderColor: 'white', borderWidth: 1, borderRadius: 100, backgroundColor: '#18A2EB', justifyContent: 'center', alignItems: 'center'}}
               onPress={() => {
-                navigation.navigate('Home', {
+                navigation.navigate('HomeDrawer', {
                   email: getEmail
                 });
               }}
