@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {
   View,
   Text,
+  Image,
   SafeAreaView
 } from 'react-native';
 import Login from './login';
@@ -15,21 +16,36 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import 'react-native-gesture-handler';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import product from './product';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const Stack = createNativeStackNavigator();
-const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
 
-const HomeDrawer = () => {
+
+function MyTabs() {
   return (
-    <Drawer.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
-      <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="Setting" component={Setting} />
-      <Drawer.Screen name="Product" component={Product} />
-      <Drawer.Screen name="Profile" component={Profile} />
-      <Drawer.Screen name="Vendor" component={Vendor} />
-    </Drawer.Navigator>
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
+      <Tab.Screen name="Home" component={Home} options={{ tabBarIcon: () => <Image source={require('../images/home-icon.png')} style={{width: 30, height: 30}} resizeMode="stretch" />}}/>
+      <Tab.Screen name="Setting" component={Setting} options={{ tabBarIcon: () => <Image source={require('../images/settingbutton.png')} style={{width: 30, height: 30}} resizeMode="stretch" />}}/>
+      <Tab.Screen name="Profile" component={Profile} options={{ tabBarIcon: () => <Image source={require('../images/profile-icon.png')} style={{width: 30, height: 30}} resizeMode="stretch" />}}/>
+      <Tab.Screen name="Product" component={Product} options={{ tabBarIcon: () => <Image source={require('../images/product-icon.png')} style={{width: 30, height: 30}} resizeMode="stretch" />}}/>
+      
+    </Tab.Navigator>
   );
 }
+
+const Stack = createNativeStackNavigator();
+// const Drawer = createDrawerNavigator();
+// const HomeDrawer = () => {
+//   return (
+//     <Drawer.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+//       <Drawer.Screen name="Home" component={Home} />
+//       <Drawer.Screen name="Setting" component={Setting} />
+//       <Drawer.Screen name="Product" component={Product} />
+//       <Drawer.Screen name="Profile" component={Profile} />
+//       <Drawer.Screen name="Vendor" component={Vendor} />
+//     </Drawer.Navigator>
+//   );
+// }
 export default RootComponent = function () {
   return (
     // <Login />
@@ -40,7 +56,7 @@ export default RootComponent = function () {
 
       <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="HomeDrawer" component={HomeDrawer} />
+        <Stack.Screen name="HomeTabs" component={MyTabs} />
       </Stack.Navigator>
     </NavigationContainer>
   )

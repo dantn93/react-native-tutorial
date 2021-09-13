@@ -12,14 +12,7 @@ export default Home = ({ route, navigation }) => {
     <SafeAreaView style={{ flex: 1 }}>
       {/* Header */}
       <View style={{ height: '8%', width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-        <TouchableOpacity
-          style={{ height: '100%', aspectRatio: 1.7, alignItems: 'center', flexDirection: 'row', alignItems: 'center', paddingLeft: 10 }}
-          onPress={() => {
-            navigation.openDrawer();
-          }}
-        >
-          <Image source={require('../images/menu-button.png')} resizeMode="stretch" />
-        </TouchableOpacity>
+        <View></View>
         <TouchableOpacity
           style={{ height: '100%', aspectRatio: 1.7, alignItems: 'center', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', paddingRight: 10 }}
           onPress={() => {
