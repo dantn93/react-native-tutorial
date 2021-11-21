@@ -17,6 +17,8 @@ import 'react-native-gesture-handler';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import product from './product';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Provider } from 'react-redux';
+import { store } from '../redux/store'
 
 const Tab = createBottomTabNavigator();
 
@@ -51,13 +53,15 @@ export default RootComponent = function () {
     // <Login />
     // <Home />
     // <Setting />
-    <NavigationContainer>
-      {/* Rest of your app code */}
+    <Provider store={store}>
+      <NavigationContainer>
+        {/* Rest of your app code */}
 
-      <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="HomeTabs" component={MyTabs} />
-      </Stack.Navigator>
-    </NavigationContainer>
+        <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="HomeTabs" component={MyTabs} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   )
 }

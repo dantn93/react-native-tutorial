@@ -6,8 +6,10 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
+import { useSelector } from 'react-redux';
 
 export default Profile = ({ navigation }) => {
+  const info = useSelector((state) => state.personalInfo);
   return (
     <SafeAreaView style={{ flex: 1 }}>
       {/* Header */}
@@ -26,6 +28,10 @@ export default Profile = ({ navigation }) => {
       {/* Body */}
       <View style={{ flex: 1, width: '100%', justifyContent: 'center', alignItems: 'center' }}>
         <Text style={{ fontSize: 30 }}>Profile Screen</Text>
+        <Text>EMAIL: {info.email}</Text>
+        <Text>SCORE: {info.score}</Text>
+        <Text>ID: {info.id}</Text>
+        <Text>ADDRESS: {info.address}</Text>
       </View>
     </SafeAreaView>
   );
