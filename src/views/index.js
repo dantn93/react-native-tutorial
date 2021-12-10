@@ -19,6 +19,7 @@ import product from './product';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Provider } from 'react-redux';
 import { store } from '../redux/store'
+import PictureList from '../views/picture-list';
 
 const Tab = createBottomTabNavigator();
 
@@ -57,9 +58,10 @@ export default RootComponent = function () {
       <NavigationContainer>
         {/* Rest of your app code */}
 
-        <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="HomeTabs" component={MyTabs} />
+        <Stack.Navigator initialRouteName="PictureList" screenOptions={{ headerShown: false }}>
+          {/* <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="HomeTabs" component={MyTabs} /> */}
+          <Stack.Screen name="PictureList" component={PictureList} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
