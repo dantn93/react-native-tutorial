@@ -59,9 +59,8 @@ export default RootComponent = function () {
         {/* Rest of your app code */}
 
         <Stack.Navigator initialRouteName="PictureList" screenOptions={{ headerShown: false }}>
-          {/* <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="HomeTabs" component={MyTabs} /> */}
-          <Stack.Screen name="PictureList" component={PictureList} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="HomeTabs" component={MyTabs} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

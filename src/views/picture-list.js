@@ -74,12 +74,12 @@ export default PictureList = () => {
 	}, [])
 
 	useEffect(() => {
-		if(imageList.length > 0) {
+		if (imageList.length > 0) {
 			let index = 0;
 			setInterval(() => {
 				stepCarousel.current.scrollTo({ x: index * screenWidth, y: 0, animated: true });
 				index += 1;
-				if(index === imageList.length) {
+				if (index === imageList.length) {
 					index = 0;
 				}
 			}, 3000);
@@ -87,14 +87,14 @@ export default PictureList = () => {
 	}, [imageList])
 
 	const handleScroll = (e) => {
-		if(!e) {
+		if (!e) {
 			return;
 		}
 		const { nativeEvent } = e;
 		if (nativeEvent && nativeEvent.contentOffset) {
 			const currentOffset = nativeEvent.contentOffset.x;
 			let imageIndex = 0;
-			if(nativeEvent.contentOffset.x > 0) {
+			if (nativeEvent.contentOffset.x > 0) {
 				imageIndex = Math.floor((nativeEvent.contentOffset.x + screenWidth / 2) / screenWidth);
 			}
 			setCurrentImage(imageIndex);
@@ -106,7 +106,7 @@ export default PictureList = () => {
 			<View style={{ flex: 1, alignItems: 'center' }}>
 				<Text style={{ fontSize: 20 }}>Picture List</Text>
 				{/* ScrollView */}
-				<View style={{width: screenWidth, height: 200}}>
+				<View style={{ width: screenWidth, height: 200 }}>
 					<ScrollView
 						horizontal
 						// pagingEnabled
@@ -123,9 +123,9 @@ export default PictureList = () => {
 					</ScrollView>
 				</View>
 				{/* Hiển thị thông tin */}
-				<Text style={{fontSize: 20, marginTop: 30}}>Index: {currentImage}</Text>
-				<Text style={{fontSize: 20, marginTop: 10}}>Type: {imageList[currentImage]? imageList[currentImage].type: ""}</Text>
-				<Text style={{fontSize: 20, marginTop: 10}}>Camera: {imageList[currentImage]? imageList[currentImage].camera: ""}</Text>
+				<Text style={{ fontSize: 20, marginTop: 30 }}>Index: {currentImage}</Text>
+				<Text style={{ fontSize: 20, marginTop: 10 }}>Type: {imageList[currentImage] ? imageList[currentImage].type : ""}</Text>
+				<Text style={{ fontSize: 20, marginTop: 10 }}>Camera: {imageList[currentImage] ? imageList[currentImage].camera : ""}</Text>
 			</View>
 		</SafeAreaView>
 	);
