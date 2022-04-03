@@ -59,7 +59,7 @@ export default RootComponent = function () {
     <Provider store={store}>
       <NavigationContainer>
         {/* Rest of your app code */}
-        <Stack.Navigator initialRouteName="Validation" screenOptions={{ headerShown: false }}>
+        <Stack.Navigator initialRouteName="HomeTabs" screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="HomeTabs" component={MyTabs} />
           <Stack.Screen name="AnimationScreen" component={AnimationScreen} />
