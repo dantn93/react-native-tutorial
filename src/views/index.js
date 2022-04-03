@@ -21,6 +21,7 @@ import { Provider } from 'react-redux';
 import { store } from '../redux/store'
 import PictureList from '../views/picture-list';
 import AnimationScreen from './animation';
+import Validation from './validation';
 
 const Tab = createBottomTabNavigator();
 
@@ -58,11 +59,11 @@ export default RootComponent = function () {
     <Provider store={store}>
       <NavigationContainer>
         {/* Rest of your app code */}
-
-        <Stack.Navigator initialRouteName="AnimationScreen" screenOptions={{ headerShown: false }}>
+        <Stack.Navigator initialRouteName="Validation" screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="HomeTabs" component={MyTabs} />
           <Stack.Screen name="AnimationScreen" component={AnimationScreen} />
+          <Stack.Screen name="Validation" component={Validation} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
