@@ -71,7 +71,7 @@ export default Home = ({ route, navigation }) => {
           onPress={() => {
             let newValue =  value + 1;
             setValue(newValue);
-          }}  
+          }}
         >
           <Text style={{color: 'white', fontSize: 20}}>Đếm số</Text>
         </TouchableOpacity> */}
