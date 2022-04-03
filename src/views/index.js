@@ -22,7 +22,7 @@ import { store } from '../redux/store'
 import PictureList from '../views/picture-list';
 import AnimationScreen from './animation';
 import Validation from './validation';
-
+import YoutubePlayer from './youtube-video';
 const Tab = createBottomTabNavigator();
 
 
@@ -59,11 +59,12 @@ export default RootComponent = function () {
     <Provider store={store}>
       <NavigationContainer>
         {/* Rest of your app code */}
-        <Stack.Navigator initialRouteName="HomeTabs" screenOptions={{ headerShown: false }}>
+        <Stack.Navigator initialRouteName="YoutubePlayer" screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="HomeTabs" component={MyTabs} />
           <Stack.Screen name="AnimationScreen" component={AnimationScreen} />
           <Stack.Screen name="Validation" component={Validation} />
+          <Stack.Screen name="YoutubePlayer" component={YoutubePlayer} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
