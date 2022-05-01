@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>383641169877-lj1ds4fnaiojtu01j6emanhvh82fuj73.apps.googleusercontent.com</string>
+	<string>383641169877-8dmfbkk43a5umhlkpdjilvmas6hln9fc.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.383641169877-lj1ds4fnaiojtu01j6emanhvh82fuj73</string>
+	<string>com.googleusercontent.apps.383641169877-8dmfbkk43a5umhlkpdjilvmas6hln9fc</string>
 	<key>API_KEY</key>
 	<string>AIzaSyB5MZkFQo0l1hkc3Aj5UJkOfwjmDXIpX38</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>org.reactjs.native.example.demoapp</string>
+	<string>org.react.native.demoapp</string>
 	<key>PROJECT_ID</key>
 	<string>pushnotification-55707</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:383641169877:ios:e956f95a60533a72ded75c</string>
+	<string>1:383641169877:ios:0899815d61647a13ded75c</string>
 </dict>
 </plist>
