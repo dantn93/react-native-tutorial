@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
+import type { Node } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -17,17 +17,14 @@ import {
   useColorScheme,
   TouchableOpacity,
   View,
+  LogBox
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import RootComponent from './src/views/index';
+LogBox.ignoreLogs([
+  "ViewPropTypes will be removed from React Native",
+])
 
+import RootComponent from './src/views/index';
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
